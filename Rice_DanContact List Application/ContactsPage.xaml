@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rice_DanContact_List_Application.Views.ContactsPage">
+
+    <VerticalStackLayout>
+
+        <Button Text="Add New Contact" Command="{Binding GoToAddPageCommand}" />
+
+        <CollectionView ItemsSource="{Binding Contacts}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedContact}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="{Binding Email}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <Button Text="View Details"
+                Command="{Binding GoToDetailsCommand}"
+                CommandParameter="{Binding SelectedContact}" />
+
+    </VerticalStackLayout>
+</ContentPage>

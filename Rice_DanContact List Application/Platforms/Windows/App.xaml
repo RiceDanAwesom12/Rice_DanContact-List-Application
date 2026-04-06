@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="Rice_DanContact_List_Application.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Rice_DanContact_List_Application.WinUI">
+
+</maui:MauiWinUIApplication>
